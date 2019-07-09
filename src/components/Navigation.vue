@@ -2,10 +2,10 @@
     <div class="navigation w-100 mb-4">
       <div class="col d-flex justify-content-center">
           <h1 v-if="title" data-toggle="toggle" data-placement="top" title="Back to Home" class="action nav-title" @click="$router.push({name: 'home'})">{{title}}</h1>
-          <h1 class="nav-title" v-else>M<img class="nav-img fa-pulse" src="../assets/logo.png" />sic Is Fun</h1>
+          <h1 class="nav-title" v-else>M<img class="nav-img fa-puls" src="../assets/logo.png" />sic Is Fun</h1>
       </div>
       <i @click="navCount++" :class="navCount % 2 ? 'far fa-times-circle text-white' : 'fas fa-bars color ts-white mr-3'" class="fa-2x side-nav-btn action" aria-label="toggle menu" data-target=".side-nav" data-toggle="collapse"></i>
-      <div class="side-nav col-5 col-md-2 bg collapse">
+      <div class="side-nav col-7 col-md-2 bg collapse">
          <div class="d-flex flex-column h-100 w-100">
             <button v-for="l in links" :key="l.name" :class="$route.name == l.routeName ? 'disabled btn-light'+l.class : 'btn-outline-light'+l.class" class="btn mb-1" @click="$router.push({name: l.routeName})">{{l.name}}</button>
             <slot></slot>

@@ -12,7 +12,7 @@ function toast({title, text = '', type = 'success', timer = 1500}) {
     })
 }
 
-function confirm(title, text, type, confirmButtonText = 'Ok', cancelButtonText = 'Cancel') {
+function confirm({title, text, type, confirmButtonText = 'Ok', cancelButtonText = 'Cancel'}) {
     return Swal.fire({
         title,
         text,
